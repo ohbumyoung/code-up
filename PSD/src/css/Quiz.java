@@ -1,3 +1,5 @@
+//문자를 숫자로 변환 하는 코딩
+
 package css;
 
 import java.util.Scanner;
@@ -6,11 +8,12 @@ public class Quiz {
 	
 	public static void main(String[]args) {
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); // 입,출력 코드
 		
 		// 문자 하나를 입력받는다.
 		
-		char ch = sc.next().charAt(0); //char는 한문자 밖에 못쓰니깐 그걸 해결하기 위해 charAT(n) n번째 용어를 sc.next()를 사용하여 변환  
+	    char ch = sc.next().charAt(0); //char는 한문자 밖에 못쓰니깐 그걸 해결하기 위해 charAT(n) n번째 용어를 sc.next()를 사용하여 변환 
+	    
 		char result = (char)(ch + 1); // 변환된 변수값 ch에+1을 해서 다시 char로 바꾼다.
 		
 		
