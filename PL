@@ -1,0 +1,38 @@
+package model;
+
+public abstract class Player {
+
+    private String name;
+    private int backNumber;
+   
+    
+    public Player(String name, int backNumber) {
+    	super();
+    	this.name = name;
+        this.backNumber = backNumber;
+        
+       
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getBackNumber() {
+        return backNumber;
+    }
+
+    public abstract String getPosition();
+    	
+    
+
+    public abstract String getStat();
+
+    @Override
+    public String toString() {
+        return name + "," +
+               getPosition() + "," +
+               getStat() + "," +
+               backNumber;
+    }
+}
