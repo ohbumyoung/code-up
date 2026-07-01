@@ -9,6 +9,7 @@ public class Run {
 		
 		View vw = new View();
 		vw.mainMenu();
+		
 	}
 
 }

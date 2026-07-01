@@ -10,10 +10,6 @@ public class Player {
     public Player() {
     	super();
     }
- 
-    public Player(int stat, double point) {
-    	super();
-    }
    
     public Player(String name, int backNumber, String position, int stat) {
     	super();
@@ -56,7 +52,7 @@ public class Player {
     	
     }
     
-    public void setBacNumber(int backNumber) { 
+    public void setBackNumber(int backNumber) { 
 		this.backNumber = backNumber;
     }
     

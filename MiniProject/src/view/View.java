@@ -11,8 +11,9 @@ public class View {
 	private PlayerController pl = new PlayerController();
 	public void mainMenu() {
 	while(true) {
-		System.out.println("=== 축구 선수 관리====");
-		System.out.println("1. 선수 등록");
+		//메뉴창
+		System.out.println("=======선수 관리 프로그램=======");
+		System.out.println("[1]ㅣ선수 등록ㅣ");
 		System.out.println("2. 선수 조회");
 		System.out.println("3. 선수 전체조회");
 		System.out.println("4. 선수 삭제");
@@ -24,7 +25,7 @@ public class View {
 		
 		
 		
-		
+		//선택한 번호로 이동
 		int menu = readInt();
 		switch(menu) {
 		case 1:
@@ -56,7 +57,7 @@ public class View {
 	}
 	
 	private int readInt() {
-		// MismatchException.. 예외가 발생하지 않은 경우, 반복문 종료
+		
 		int menu = -1;
 		
 		while(!sc.hasNextInt()) {
@@ -70,9 +71,9 @@ public class View {
 	}
 	
 	
-	
+	//등록
 	public void addList() {
-		System.out.println("***** 선수를 등록해주세요. *****");
+		System.out.println("===== 선수를 등록해주세요. *****");
 		
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
@@ -116,10 +117,10 @@ public class View {
 			}
 		} return false;
 	}
-	
+	//선수 조회
 	public void searchPlayer() {
-		System.out.println("***** 선수 검색 *****");
-		System.out.print("선수 검색 : ");
+		System.out.println("***** 선수 조회 *****");
+		System.out.print("선수 조회 : ");
 		String name = sc.nextLine();
 		List<Player> player =  pl.searchPlayer(name);
 		if(player.isEmpty()) {
@@ -127,13 +128,13 @@ public class View {
 		}else {
 			
 			for(Player p:player) {
-			System.out.println(p + "을(를) 검색했습니다.");
+			System.out.println(p + "을(를) 조회했습니다.");
 			}
 		}
 }
-	
+	//전체 선수 출력
 	public void printAll() { //TODO:
-		System.out.println("***** 선수단 출력 *****");
+		System.out.println("***** 등록한 선수 목록 *****");
 		pl.printAll();
 	}
 	
@@ -156,7 +157,7 @@ public class View {
 		
 		
 		
-		System.out.println("***** 선수 수정 *****");
+		System.out.println("***** 선수 프로필 수정 *****");
 		System.out.print("검색할 선수명: ");
 		String searchName = sc.nextLine();	
 		Player result = pl.searchPlayerByName(searchName);
@@ -185,7 +186,7 @@ public class View {
 		sc.nextLine();
 		
 
-		//TODO: 골기록하고 resul만 남기기면 null null null로 뜸
+		
 		Player player = pl.setPlayer(searchName, new Player(newName,newNumber,newPosition,newStat, result.getPoint()));
 		
 		if(player == null) {
